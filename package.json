@@ -1,0 +1,11 @@
+{
+  "name": "bug-node-experimental-modules",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node --experimental-modules example.mjs",
+    "fix": "cp node_modules/three/build/three.module.js node_modules/three/build/three.module.mjs && sed -i .bak 's/build\\/three.js/build\\/three.module.mjs/g' node_modules/three/package.json"
+  },
+  "dependencies": {
+    "three": "^0.88.0"
+  }
+}
